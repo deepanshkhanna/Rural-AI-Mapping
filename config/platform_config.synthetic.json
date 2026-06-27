@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0-synthetic",
+  "classes": [
+    {"id": 0, "name": "Background", "color_rgb": [0, 0, 0]},
+    {"id": 1, "name": "Road", "color_rgb": [255, 0, 0]},
+    {"id": 2, "name": "Bridge", "color_rgb": [0, 0, 255]},
+    {"id": 3, "name": "Built-Up Area", "color_rgb": [255, 255, 0]},
+    {"id": 4, "name": "Water Body", "color_rgb": [0, 200, 255]}
+  ],
+  "splits": {
+    "train_tiffs": ["SYNTHETIC_TEST_ORTHO"],
+    "val_tiffs": ["SYNTHETIC_TEST_ORTHO"]
+  },
+  "training": {
+    "architecture": "DeepLabV3Plus",
+    "encoder_name": "resnet50",
+    "encoder_weights": "imagenet",
+    "image_size": 256,
+    "patches_per_image": 4,
+    "batch_size": 2,
+    "accumulation_steps": 1,
+    "num_epochs": 1
+  },
+  "evaluation": {
+    "batch_size": 2,
+    "num_workers": 0,
+    "max_val_patches": 8
+  },
+  "security": {
+    "allowed_upload_ext": ["png", "jpg", "jpeg", "tif", "tiff"],
+    "allowed_upload_mime": ["image/png", "image/jpeg", "image/tiff"],
+    "max_upload_size_mb": 64,
+    "max_batch_files": 8,
+    "max_image_dimension_px": 8192,
+    "api_key_header": "x-api-key",
+    "api_key_env": "SVAMITVA_API_KEY",
+    "allow_unsafe_checkpoint_load": false
+  },
+  "geospatial": {
+    "allowed_epsg": [32643, 32644],
+    "default_pixel_size_m": 0.5
+  },
+  "dataset_sources": [
+    {
+      "name": "SYNTH",
+      "tiff_dir": "tests/fixtures/synthetic/tiffs",
+      "shp_dir": "tests/fixtures/synthetic/shp",
+      "class_mapping": {
+        "Road.shp": 1,
+        "Bridge.shp": 2,
+        "Built_Up_Area_typ.shp": 3,
+        "Water_Body.shp": 4
+      }
+    }
+  ]
+}

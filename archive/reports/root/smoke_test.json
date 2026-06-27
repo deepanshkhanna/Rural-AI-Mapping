@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-06-15T14:55:52.831941+00:00",
+  "steps": {
+    "dataloaders": {
+      "ok": true,
+      "train_batches": 6,
+      "val_batches": 299
+    },
+    "model": {
+      "ok": true,
+      "device": "cuda"
+    },
+    "optimizer": {
+      "ok": true
+    },
+    "train_batch": {
+      "ok": true,
+      "loss": 1.50124192237854
+    },
+    "checkpoint_save": {
+      "ok": true,
+      "path": "/home/dk/ml_projects/iit_hackathon/outputs/checkpoints/smoke_test_checkpoint.pth",
+      "detail": "epoch=0"
+    },
+    "validation": {
+      "ok": true,
+      "val_loss": 1.3026554556594645,
+      "val_iou": 5.3663927347240005e-05
+    }
+  },
+  "ok": true
+}

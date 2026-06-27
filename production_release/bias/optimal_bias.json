@@ -1,0 +1,24 @@
+{
+  "candidate": "epoch_71",
+  "optimal_bias": [
+    -0.5,
+    0.75,
+    0.0,
+    -0.5,
+    -0.5
+  ],
+  "best_miou": 0.5090941797178685,
+  "per_class_iou_bias_only": {
+    "Road": 0.43522037875965336,
+    "Bridge": 0.0,
+    "Built-Up Area": 0.7333131547222314,
+    "Water Body": 0.8678431853895893
+  },
+  "ensemble_weights": {
+    "best": 0.65,
+    "latest": 0.35
+  },
+  "best_ckpt": "outputs/checkpoints/best_model.pth",
+  "latest_ckpt": "outputs/checkpoints/latest_model.pth",
+  "generated_at": "2026-06-15T18:32:48.579277+00:00"
+}

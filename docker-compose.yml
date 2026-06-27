@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  svamitva-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: svamitva-api:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - SVAMITVA_API_KEY=${SVAMITVA_API_KEY}
+    volumes:
+      - ./outputs:/app/outputs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; assert os.getenv('SVAMITVA_API_KEY')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

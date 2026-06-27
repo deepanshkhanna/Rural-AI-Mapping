@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-06-15T14:56:16.188320+00:00",
+  "batches": 50,
+  "ok": true,
+  "peak_vram_gb": 2.769,
+  "avg_batch_sec": 0.496,
+  "gpu_util_pct": 16.0,
+  "gpu_temp_c": 62.0,
+  "val_iou": 0.1598896914589895,
+  "checkpoint_ok": true,
+  "memory_leak_detected": false
+}

@@ -1,0 +1,190 @@
+{
+  "village_name": "Synthetic Verification Village",
+  "timestamp": "2026-06-15 17:15:22",
+  "pixel_size_m": 0.5,
+  "infrastructure": {
+    "total_area_ha": 26.21,
+    "road_length_m": 0.0,
+    "road_coverage_pct": 0.0,
+    "n_buildings": 5,
+    "builtup_area_m2": 9516.5,
+    "n_water_bodies": 0,
+    "water_area_m2": 0.0,
+    "n_rooftops": 1
+  },
+  "spatial_intelligence": {
+    "pixel_size_m": 0.5,
+    "road_total_length_m": 0.0,
+    "road_connected_components": 0,
+    "road_largest_component_pct": 0.0,
+    "builtup_clusters": 4,
+    "builtup_road_access_pct": 0.0,
+    "builtup_water_proximity_pct": 0.0,
+    "water_bodies": 0,
+    "water_total_area_m2": 0.0,
+    "settlement_fragmentation_index": 1.05,
+    "recommendations": [
+      "Only 0% of built-up area is within ~50 m of mapped roads. Field verification recommended for remote settlements."
+    ]
+  },
+  "explainability": {
+    "confidence_threshold": 0.7,
+    "high_confidence_pct": 6.65,
+    "review_required_pct": 93.35,
+    "per_class_mean_confidence": {
+      "Background": 0.5597,
+      "Road": 0.0,
+      "Bridge": 0.0,
+      "Built-Up Area": 0.589,
+      "Water Body": 0.0
+    },
+    "uncertain_pixel_count": 978822,
+    "review_zones": [
+      {
+        "zone_id": 1,
+        "centroid_x_px": 513.8,
+        "centroid_y_px": 508.6,
+        "area_px": 978525,
+        "mean_confidence": 0.5456
+      }
+    ],
+    "audit_notes": [
+      "Pixels above 70% confidence: 6.7%",
+      "Field review recommended for 1 contiguous uncertain zone(s)",
+      "Per-class confidence is mean softmax probability within predicted class regions"
+    ]
+  },
+  "field_verification": {
+    "village_accessibility_score": 26.9,
+    "field_verification_queue": [
+      {
+        "rank": 1,
+        "score": 64.8,
+        "centroid_x_px": 499.3,
+        "centroid_y_px": 511.6,
+        "item_type": "settlement_cluster",
+        "label": "Settlement Cluster 3",
+        "reason": "Settlement Cluster 3: poor road access, large settlement footprint",
+        "settlement_area_m2": 9270.0,
+        "n_structures_estimate": 116,
+        "mean_confidence": 0.5911,
+        "access_assessment": "isolated",
+        "score_breakdown": {
+          "confidence_risk": 40.89,
+          "isolation_risk": 100.0,
+          "cluster_size": 100.0,
+          "water_proximity": 0.0,
+          "fragmentation_context": 10.5,
+          "weights": {
+            "confidence_risk": 0.35,
+            "isolation_risk": 0.3,
+            "cluster_size": 0.2,
+            "water_proximity": 0.1,
+            "fragmentation_context": 0.05
+          },
+          "weighted_total": 64.84
+        }
+      },
+      {
+        "rank": 2,
+        "score": 55.0,
+        "centroid_x_px": 422.5,
+        "centroid_y_px": 607.9,
+        "item_type": "settlement_cluster",
+        "label": "Settlement Cluster 4",
+        "reason": "Settlement Cluster 4: poor road access",
+        "settlement_area_m2": 88.8,
+        "n_structures_estimate": 1,
+        "mean_confidence": 0.5149,
+        "access_assessment": "isolated",
+        "score_breakdown": {
+          "confidence_risk": 48.51,
+          "isolation_risk": 100.0,
+          "cluster_size": 37.68,
+          "water_proximity": 0.0,
+          "fragmentation_context": 10.5,
+          "weights": {
+            "confidence_risk": 0.35,
+            "isolation_risk": 0.3,
+            "cluster_size": 0.2,
+            "water_proximity": 0.1,
+            "fragmentation_context": 0.05
+          },
+          "weighted_total": 55.04
+        }
+      },
+      {
+        "rank": 3,
+        "score": 54.3,
+        "centroid_x_px": 548.5,
+        "centroid_y_px": 389.2,
+        "item_type": "settlement_cluster",
+        "label": "Settlement Cluster 2",
+        "reason": "Settlement Cluster 2: poor road access",
+        "settlement_area_m2": 63.8,
+        "n_structures_estimate": 1,
+        "mean_confidence": 0.5045,
+        "access_assessment": "isolated",
+        "score_breakdown": {
+          "confidence_risk": 49.55,
+          "isolation_risk": 100.0,
+          "cluster_size": 31.94,
+          "water_proximity": 0.0,
+          "fragmentation_context": 10.5,
+          "weights": {
+            "confidence_risk": 0.35,
+            "isolation_risk": 0.3,
+            "cluster_size": 0.2,
+            "water_proximity": 0.1,
+            "fragmentation_context": 0.05
+          },
+          "weighted_total": 54.26
+        }
+      }
+    ],
+    "top_field_priorities": [
+      "Priority #1: Verify isolated settlement cluster 3 (no road within 50 m)",
+      "Priority #2: Verify isolated settlement cluster 4 (no road within 50 m)",
+      "Priority #3: Verify isolated settlement cluster 2 (no road within 50 m)"
+    ],
+    "scoring_model": {
+      "name": "SurveyPriorityScore",
+      "range": "0-100",
+      "weights": {
+        "confidence_risk": 0.35,
+        "isolation_risk": 0.3,
+        "cluster_size": 0.2,
+        "water_proximity": 0.1,
+        "fragmentation_context": 0.05
+      },
+      "road_access_buffer_m": 50.0,
+      "water_proximity_buffer_m": 30.0,
+      "confidence_threshold": 0.7
+    }
+  },
+  "executive_summary": [
+    "Village Accessibility Score: 27/100",
+    "Priority #1: Verify isolated settlement cluster 3 (no road within 50 m)",
+    "Priority #2: Verify isolated settlement cluster 4 (no road within 50 m)",
+    "Priority #3: Verify isolated settlement cluster 2 (no road within 50 m)",
+    "Total survey area: 26.21 ha",
+    "Road network: ~0 m across 0 segment(s)",
+    "Built-up: 5 structures; 0% within road access buffer",
+    "Water: 0 bodies covering 0 m\u00b2",
+    "Automated confidence: 7% high-confidence; 93% flagged for review",
+    "Only 0% of built-up area is within ~50 m of mapped roads. Field verification recommended for remote settlements."
+  ],
+  "provenance": {
+    "git_sha": "b3b22e0884f4d3b04e6dbfd4f8bbd4f564c3dfa6",
+    "tiff": "tests/fixtures/synthetic/tiffs/SYNTHETIC_TEST_ORTHO.tif",
+    "tiff_sha256": "48c6c8b1c154108d25562173688c74d8903c03f0e501723ffc8fc0094f8a98ef",
+    "best_ckpt_sha256": "164b27a587877be072880f66e43d5cb787c94d75094dff897bce29ee842ba845",
+    "eval_artifact": "outputs/calibrated_eval_results.json",
+    "gsd_m": 0.5,
+    "verification_window_px": [
+      256,
+      256
+    ],
+    "scoring_scope": "full_raster"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "certified_at": "2026-06-15T18:41:08.274158+00:00",
+  "winner": "epoch_71",
+  "ensemble": {
+    "best_ckpt": "checkpoints/best_model.pth",
+    "best_epoch": 71,
+    "latest_ckpt": "checkpoints/latest_model.pth",
+    "latest_epoch": 80,
+    "weights": {
+      "best": 0.65,
+      "latest": 0.35
+    }
+  },
+  "bias_file": "bias/optimal_bias.json",
+  "files": {
+    "bias/optimal_bias.json": {
+      "sha256": "4ff3321bb6aa06c46e834f844ea0e3a1b574e806bd0515c4531b71e51d0e788e",
+      "size_bytes": 533
+    },
+    "checkpoints/best_model.pth": {
+      "sha256": "8675e06ae0584bd5105b88f2e8356777d85d7eaeb585c4b4381a087162f7d892",
+      "size_bytes": 320672655
+    },
+    "checkpoints/latest_model.pth": {
+      "sha256": "f8f45947be59825fbb6addc54c75d748f1722d57bb636299bfe9a1da51ca1aa7",
+      "size_bytes": 427751129
+    },
+    "metrics/epoch_33_results.json": {
+      "sha256": "1ed83b7810619890011ede8427c397de283bcb15301d7fd2b0345a5919c4f3a5",
+      "size_bytes": 3504
+    },
+    "metrics/epoch_69_results.json": {
+      "sha256": "f1af3f40bddf52191af2e2bddf86ff27d457b786d7538be3997249a26eb8f488",
+      "size_bytes": 3489
+    },
+    "metrics/epoch_71_results.json": {
+      "sha256": "14f53a12e3332ac15f81d663ff5a0a83b141093b5d6b0fab4928feae1c82d4c4",
+      "size_bytes": 6188
+    },
+    "metrics/epoch_80_results.json": {
+      "sha256": "14b3728fb3f9af80f91a26360892bc3ad87d4414a31681cb8b976549294a9d25",
+      "size_bytes": 3458
+    }
+  }
+}

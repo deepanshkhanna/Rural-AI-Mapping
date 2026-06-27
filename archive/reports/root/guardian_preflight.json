@@ -1,0 +1,136 @@
+{
+  "timestamp_utc": "2026-06-15T15:06:29.345487+00:00",
+  "go_no_go": "GO",
+  "checks": [
+    {
+      "check": "villages_train",
+      "ok": true,
+      "detail": "missing: []",
+      "blocking": true
+    },
+    {
+      "check": "villages_val",
+      "ok": true,
+      "detail": "missing: []",
+      "blocking": true
+    },
+    {
+      "check": "rasters_readable",
+      "ok": true,
+      "detail": "8/8 OK; errors=[]",
+      "blocking": true
+    },
+    {
+      "check": "shapefiles_valid",
+      "ok": true,
+      "detail": "scanned 12 shp, 0 issues",
+      "blocking": true
+    },
+    {
+      "check": "train_split_loads",
+      "ok": true,
+      "detail": "12 patches, 6 TIFFs",
+      "blocking": true
+    },
+    {
+      "check": "val_split_loads",
+      "ok": true,
+      "detail": "598 patches, 2 TIFFs",
+      "blocking": true
+    },
+    {
+      "check": "gpu_cuda",
+      "ok": true,
+      "detail": "NVIDIA GeForce RTX 5070 Laptop GPU, 8.55 GB VRAM",
+      "blocking": true
+    },
+    {
+      "check": "gpu_vram",
+      "ok": true,
+      "detail": "need >=6 GB, have 8.55 GB",
+      "blocking": true
+    },
+    {
+      "check": "gpu_temperature",
+      "ok": true,
+      "detail": "53.0\u00b0C (max 90\u00b0C)",
+      "blocking": true
+    },
+    {
+      "check": "disk_free",
+      "ok": true,
+      "detail": "823.6 GB free (need >= 50.0 GB)",
+      "blocking": true
+    },
+    {
+      "check": "disk_checkpoints",
+      "ok": true,
+      "detail": "checkpoint headroom OK (823.6 GB)",
+      "blocking": false
+    },
+    {
+      "check": "disk_logs",
+      "ok": true,
+      "detail": "/home/dk/ml_projects/iit_hackathon/outputs/guardian",
+      "blocking": true
+    },
+    {
+      "check": "disk_tensorboard",
+      "ok": true,
+      "detail": "outputs/tensorboard",
+      "blocking": true
+    },
+    {
+      "check": "disk_eval",
+      "ok": true,
+      "detail": "outputs/eval",
+      "blocking": true
+    },
+    {
+      "check": "checkpoint_dir_writable",
+      "ok": true,
+      "detail": "/home/dk/ml_projects/iit_hackathon/outputs/checkpoints",
+      "blocking": true
+    },
+    {
+      "check": "outputs_writable",
+      "ok": true,
+      "detail": "outputs/",
+      "blocking": true
+    },
+    {
+      "check": "reports_writable",
+      "ok": true,
+      "detail": "reports/",
+      "blocking": true
+    },
+    {
+      "check": "incidents_writable",
+      "ok": true,
+      "detail": "reports/incidents/",
+      "blocking": true
+    }
+  ],
+  "disk_free_gb": 823.61,
+  "gpu": {
+    "cuda_available": true,
+    "name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "vram_gb": 8.55,
+    "temp_c": 53.0,
+    "util_pct": 53.0,
+    "mem_used_mb": 995.0,
+    "mem_total_mb": 8151.0
+  },
+  "train_villages": [
+    "PINDORI MAYA SINGH-TUGALWAL_28456_ortho",
+    "TIMMOWAL_37695_ORI",
+    "BADETUMNAR_450157_BANGAPAL_450155_CHHOTETUMAR_450149_MOFALNAR_450150_ORTHO",
+    "MURDANDA_450879_AWAPALLI_CHINTAKONTA_ORTHO",
+    "KUTRU_451189_AAKLANKA_451163_ORTHO",
+    "SAMLUR_450163_SIYANAR_450164_KUTULNAR_450165_BINJAM_450166_JHODIYAWADAM_450167_ORTHO"
+  ],
+  "val_villages": [
+    "28996_NADALA_ORTHO",
+    "NAGUL_450171_MADASE_450172_GHOTPAL_450137_ORTHO"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "synthetic": true,
+  "tiff": "tests/fixtures/synthetic/tiffs/SYNTHETIC_TEST_ORTHO.tif",
+  "shp_dir": "tests/fixtures/synthetic/shp",
+  "crs": "EPSG:32643",
+  "gsd_m": 0.5
+}

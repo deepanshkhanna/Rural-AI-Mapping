@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "classes": [
+    {"id": 0, "name": "Background", "color_rgb": [0, 0, 0]},
+    {"id": 1, "name": "Road", "color_rgb": [255, 0, 0]},
+    {"id": 2, "name": "Bridge", "color_rgb": [0, 0, 255]},
+    {"id": 3, "name": "Built-Up Area", "color_rgb": [255, 255, 0]},
+    {"id": 4, "name": "Water Body", "color_rgb": [0, 200, 255]}
+  ],
+  "splits": {
+    "train_tiffs": [
+      "PINDORI MAYA SINGH-TUGALWAL_28456_ortho",
+      "TIMMOWAL_37695_ORI",
+      "BADETUMNAR_450157_BANGAPAL_450155_CHHOTETUMAR_450149_MOFALNAR_450150_ORTHO",
+      "MURDANDA_450879_AWAPALLI_CHINTAKONTA_ORTHO",
+      "KUTRU_451189_AAKLANKA_451163_ORTHO",
+      "SAMLUR_450163_SIYANAR_450164_KUTULNAR_450165_BINJAM_450166_JHODIYAWADAM_450167_ORTHO"
+    ],
+    "val_tiffs": [
+      "28996_NADALA_ORTHO",
+      "NAGUL_450171_MADASE_450172_GHOTPAL_450137_ORTHO"
+    ]
+  },
+  "training": {
+    "architecture": "DeepLabV3Plus",
+    "encoder_name": "resnet50",
+    "encoder_weights": "imagenet",
+    "image_size": 768,
+    "patches_per_image": 150,
+    "batch_size": 4,
+    "accumulation_steps": 8,
+    "num_epochs": 80
+  },
+  "evaluation": {
+    "batch_size": 8,
+    "num_workers": 4,
+    "max_val_patches": 500
+  },
+  "security": {
+    "allowed_upload_ext": ["png", "jpg", "jpeg", "tif", "tiff"],
+    "allowed_upload_mime": ["image/png", "image/jpeg", "image/tiff"],
+    "max_upload_size_mb": 64,
+    "max_batch_files": 8,
+    "max_image_dimension_px": 8192,
+    "api_key_header": "x-api-key",
+    "api_key_env": "SVAMITVA_API_KEY",
+    "allow_unsafe_checkpoint_load": false
+  },
+  "geospatial": {
+    "allowed_epsg": [32643, 32644, 3857],
+    "default_pixel_size_m": 0.3,
+    "raster_extensions": [".tif", ".tiff"]
+  }
+}

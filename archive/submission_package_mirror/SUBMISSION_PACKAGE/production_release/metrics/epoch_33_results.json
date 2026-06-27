@@ -1,0 +1,152 @@
+{
+  "candidate": "epoch_33",
+  "generated_at": "2026-06-15T17:51:27.205317+00:00",
+  "val_patches": 598,
+  "val_tiffs": [
+    "28996_NADALA_ORTHO",
+    "NAGUL_450171_MADASE_450172_GHOTPAL_450137_ORTHO"
+  ],
+  "best_ckpt": "outputs/checkpoints_backup/timed/checkpoint_20260615_2104.pth",
+  "latest_ckpt": "outputs/checkpoints/latest_model.pth",
+  "best_sha256": "fee3a48645d1e302c14bfe2c2a3e74385a3ada4385bd3b2a59b0f9324fcd94a7",
+  "latest_sha256": "f8f45947be59825fbb6addc54c75d748f1722d57bb636299bfe9a1da51ca1aa7",
+  "best_epoch": 33,
+  "latest_epoch": 80,
+  "bias": {
+    "candidate": "epoch_33",
+    "optimal_bias": [
+      -0.5,
+      0.25,
+      0.0,
+      -0.25,
+      -0.5
+    ],
+    "best_miou": 0.506904257253419,
+    "per_class_iou_bias_only": {
+      "Road": 0.41984730152581806,
+      "Bridge": 0.0,
+      "Built-Up Area": 0.7322003538242583,
+      "Water Body": 0.8755693736635998
+    },
+    "ensemble_weights": {
+      "best": 0.65,
+      "latest": 0.35
+    },
+    "best_ckpt": "outputs/checkpoints_backup/timed/checkpoint_20260615_2104.pth",
+    "latest_ckpt": "outputs/checkpoints/latest_model.pth",
+    "generated_at": "2026-06-15T17:56:57.748256+00:00"
+  },
+  "eval_calibrated_tta": {
+    "candidate": "epoch_33",
+    "use_tta": true,
+    "baseline": {
+      "Road": {
+        "iou": 0.4256,
+        "precision": 0.61,
+        "recall": 0.5848,
+        "f1": 0.5971,
+        "gt_pixels": 6264586
+      },
+      "Bridge": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "gt_pixels": 6290
+      },
+      "Built-Up Area": {
+        "iou": 0.7399,
+        "precision": 0.781,
+        "recall": 0.9336,
+        "f1": 0.8505,
+        "gt_pixels": 23509149
+      },
+      "Water Body": {
+        "iou": 0.7317,
+        "precision": 0.7959,
+        "recall": 0.9007,
+        "f1": 0.8451,
+        "gt_pixels": 2589899
+      },
+      "fg_miou": 0.4743
+    },
+    "calibrated": {
+      "Road": {
+        "iou": 0.4256,
+        "precision": 0.6021,
+        "recall": 0.5922,
+        "f1": 0.5971,
+        "gt_pixels": 6264586
+      },
+      "Bridge": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "gt_pixels": 6290
+      },
+      "Built-Up Area": {
+        "iou": 0.7434,
+        "precision": 0.7884,
+        "recall": 0.9287,
+        "f1": 0.8528,
+        "gt_pixels": 23509149
+      },
+      "Water Body": {
+        "iou": 0.7314,
+        "precision": 0.7953,
+        "recall": 0.901,
+        "f1": 0.8448,
+        "gt_pixels": 2589899
+      },
+      "fg_miou": 0.4751
+    }
+  },
+  "class_metrics": {
+    "Road": {
+      "iou": 0.4256,
+      "precision": 0.6021,
+      "recall": 0.5922,
+      "f1": 0.5971,
+      "gt_pixels": 6264586
+    },
+    "Bridge": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "gt_pixels": 6290
+    },
+    "Built-Up Area": {
+      "iou": 0.7434,
+      "precision": 0.7884,
+      "recall": 0.9287,
+      "f1": 0.8528,
+      "gt_pixels": 23509149
+    },
+    "Water Body": {
+      "iou": 0.7314,
+      "precision": 0.7953,
+      "recall": 0.901,
+      "f1": 0.8448,
+      "gt_pixels": 2589899
+    },
+    "fg_miou": 0.4751
+  },
+  "summary": {
+    "fg_miou": 0.4751,
+    "road_iou": 0.4256,
+    "builtup_iou": 0.7434,
+    "water_iou": 0.7314,
+    "bridge_iou": 0.0,
+    "optimal_bias": [
+      -0.5,
+      0.25,
+      0.0,
+      -0.25,
+      -0.5
+    ],
+    "bias_search_fg_miou": 0.506904257253419
+  },
+  "elapsed_seconds": 480.3
+}

@@ -1,0 +1,77 @@
+{
+  "package_version": "1.0",
+  "provenance": {
+    "git_sha": "b3b22e0884f4d3b04e6dbfd4f8bbd4f564c3dfa6",
+    "tiff": "tests/fixtures/synthetic/tiffs/SYNTHETIC_TEST_ORTHO.tif",
+    "tiff_sha256": "48c6c8b1c154108d25562173688c74d8903c03f0e501723ffc8fc0094f8a98ef",
+    "best_ckpt_sha256": "164b27a587877be072880f66e43d5cb787c94d75094dff897bce29ee842ba845",
+    "eval_artifact": "outputs/calibrated_eval_results.json",
+    "gsd_m": 0.5,
+    "verification_window_px": [
+      256,
+      256
+    ],
+    "scoring_scope": "full_raster"
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "33f2a9a3a715a5eb6d3964edfa87bdbb4c6a324294370f63b51f864a37e8b5f3",
+      "bytes": 58676
+    },
+    {
+      "path": "metrics.json",
+      "sha256": "0c1fda4e9585072d28b46f1eab84b8b5cecc985d42bed5b646d7ff60c84b93f5",
+      "bytes": 2848
+    },
+    {
+      "path": "overlays/01_input_rgb.png",
+      "sha256": "dd8ddf87dbd7416cc335b89a435c19e14bc2e9dc213d9b4cb9ac2bc907035aef",
+      "bytes": 811
+    },
+    {
+      "path": "overlays/02_ground_truth.png",
+      "sha256": "5efff62707652653956efdea12a76793d1627c9a84d016fd840f1ddd2c188924",
+      "bytes": 841
+    },
+    {
+      "path": "overlays/03_prediction.png",
+      "sha256": "b86ee12e801ee89f38c6df46ec5f4a76d49f63479c412fb8b471dd80c4c84191",
+      "bytes": 1448
+    },
+    {
+      "path": "overlays/04_overlay.png",
+      "sha256": "f57dcd675bebd6fdc6d01c2f5fad8a73143f2c0609cfe6e3e85bac1c1f449c3d",
+      "bytes": 1627
+    },
+    {
+      "path": "overlays/05_confidence.png",
+      "sha256": "c3a3662c79268d2e76f6f98ddace784f43c2cd57f89ee2177675419902f3d63a",
+      "bytes": 34113
+    },
+    {
+      "path": "overlays/06_error_map.png",
+      "sha256": "995e88ae28b08b9ec8260edd91af4b3471d4503609adcbe62ebf2f449827cba4",
+      "bytes": 1693
+    },
+    {
+      "path": "overlays/07_field_priority_map.png",
+      "sha256": "382980e068c9b62e0bdb8b460e668d457de1902e9170db3768bea0369c8f1e86",
+      "bytes": 16697
+    },
+    {
+      "path": "survey_intelligence.json",
+      "sha256": "4c9bf23c14d2d4a3b9a84b2cafb0bb4c508c561e8fe134b06754714957285ba9",
+      "bytes": 6278
+    },
+    {
+      "path": "verification_manifest.json",
+      "sha256": "fdaf0350dd83d623ef14ecc90add8867f03b71f84af399cbf9e3e13ea1c603c1",
+      "bytes": 2247
+    }
+  ],
+  "reproduce_commands": [
+    "bash scripts/reproduce.sh",
+    "python scripts/generate_judge_package.py --train"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "provenance": {
+    "generated_at": "2026-06-15 18:54:40 +0000",
+    "git_sha": "350a6d541b3c0857d8c1d557b8906298481e7963",
+    "python": "3.10.12",
+    "torch": "2.12.0+cu130",
+    "device": "cuda",
+    "val_tiffs": [
+      "28996_NADALA_ORTHO",
+      "NAGUL_450171_MADASE_450172_GHOTPAL_450137_ORTHO"
+    ],
+    "patch_size": 768,
+    "val_patches": 598,
+    "calibration": {
+      "best_ckpt": "outputs/checkpoints/best_model.pth",
+      "latest_ckpt": "outputs/checkpoints/latest_model.pth",
+      "best_sha256": "8675e06ae0584bd5105b88f2e8356777d85d7eaeb585c4b4381a087162f7d892",
+      "latest_sha256": "f8f45947be59825fbb6addc54c75d748f1722d57bb636299bfe9a1da51ca1aa7",
+      "bias_source": "outputs/optimal_bias.json",
+      "bias": [
+        -0.5,
+        0.75,
+        0.0,
+        -0.5,
+        -0.5
+      ]
+    },
+    "eval_seconds": 161.62
+  },
+  "baseline": {
+    "Road": {
+      "iou": 0.4369,
+      "precision": 0.5842,
+      "recall": 0.6342,
+      "f1": 0.6082,
+      "gt_pixels": 6264586
+    },
+    "Bridge": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "gt_pixels": 6290
+    },
+    "Built-Up Area": {
+      "iou": 0.7395,
+      "precision": 0.8225,
+      "recall": 0.88,
+      "f1": 0.8502,
+      "gt_pixels": 23509149
+    },
+    "Water Body": {
+      "iou": 0.7476,
+      "precision": 0.8293,
+      "recall": 0.8835,
+      "f1": 0.8556,
+      "gt_pixels": 2589899
+    },
+    "fg_miou": 0.481
+  },
+  "calibrated": {
+    "Road": {
+      "iou": 0.4356,
+      "precision": 0.5752,
+      "recall": 0.6423,
+      "f1": 0.6069,
+      "gt_pixels": 6264586
+    },
+    "Bridge": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "gt_pixels": 6290
+    },
+    "Built-Up Area": {
+      "iou": 0.7415,
+      "precision": 0.8307,
+      "recall": 0.8735,
+      "f1": 0.8515,
+      "gt_pixels": 23509149
+    },
+    "Water Body": {
+      "iou": 0.7466,
+      "precision": 0.8282,
+      "recall": 0.8834,
+      "f1": 0.8549,
+      "gt_pixels": 2589899
+    },
+    "fg_miou": 0.4809
+  }
+}

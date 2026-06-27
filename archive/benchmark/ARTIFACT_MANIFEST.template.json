@@ -1,0 +1,33 @@
+{
+  "release_version": "1.0.0",
+  "description": "Production benchmark artifacts for independent judge verification. Populate sha256 after packaging.",
+  "license_note": "SVAMITVA orthomosaics and trained weights may be subject to hackathon data-use terms. Ship only artifacts you are authorized to redistribute.",
+  "artifacts": [
+    {
+      "path": "outputs/checkpoints/best_model.pth",
+      "sha256": "REPLACE_WITH_SHA256",
+      "role": "EMA best checkpoint (65% ensemble weight)"
+    },
+    {
+      "path": "outputs/checkpoints/latest_model.pth",
+      "sha256": "REPLACE_WITH_SHA256",
+      "role": "EMA latest checkpoint (35% ensemble weight)"
+    },
+    {
+      "path": "outputs/optimal_bias.json",
+      "sha256": "REPLACE_WITH_SHA256",
+      "role": "Per-class logit bias tuned on validation set"
+    }
+  ],
+  "data_layout": {
+    "orthomosaics": "data/<source>/tiffs/*.tif",
+    "labels": "data/<source>/shp/*.shp",
+    "config": "config/platform_config.v1.json"
+  },
+  "reproduce": [
+    "export SVAMITVA_ARTIFACTS_URL='<release-tarball-url>'",
+    "bash scripts/fetch_artifacts.sh",
+    "SVAMITVA_CONFIG_PATH=config/platform_config.v1.json python run_calibrated_eval.py --require-bias",
+    "bash scripts/verify_production_benchmark.sh benchmark/ARTIFACT_MANIFEST.json"
+  ]
+}

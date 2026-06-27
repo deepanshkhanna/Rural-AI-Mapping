@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Data and geospatial assets (blocked from VCS)
+data/**
+downloads/**
+Test/**
+outputs/**
+demo_ui/assets/samples/**
+!data/.gitkeep
+!Test/.gitkeep
+!outputs/.gitkeep
+!outputs/calibrated_eval_results.json
+!evidence/**
+!evidence/judge_package/**
+!evidence/judge_package/**/*
+!demo_ui/assets/samples/.gitkeep
+
+# Geospatial and ML binaries
+*.tif
+*.tiff
+*.ecw
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.gpkg
+*.geojson
+*.npy
+*.npz
+*.pth
+*.pt
+*.onnx
+
+# V1 checkpoints ship via GitHub release (recovery_bundle_v1.zip), not git — see CHECKPOINT_RECOVERY.md
+
+# V1 recovery bundle (local artifact; attach to GitHub release)
+recovery_bundle/
+recovery_bundle_v1.zip
+
+# Secrets and environment
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and temp artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Notebook and coverage artifacts
+.ipynb_checkpoints/
+.coverage
+coverage.xml
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
